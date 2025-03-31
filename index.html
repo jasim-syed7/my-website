@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak from Jasim's Family</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d8b5, #b8c19e);
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px #fff;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        .star:nth-child(1) { top: 25%; left: 15%; }
+        .star:nth-child(2) { top: 45%; left: 75%; animation-delay: 0.8s; }
+        .star:nth-child(3) { top: 65%; left: 35%; animation-delay: 1.3s; }
+        .star:nth-child(4) { top: 85%; left: 55%; animation-delay: 1.9s; }
+
+        .content {
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff1493;
+            text-shadow: 3px 3px 10px #8b008b;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background: #ffeb3b;
+            border-radius: 50% 50% 0 0;
+            animation: fall 5s infinite linear;
+        }
+
+        .petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .petal:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .petal:nth-child(3) { left: 50%; animation-delay: 2s; }
+        .petal:nth-child(4) { left: 70%; animation-delay: 3s; }
+
+        @keyframes twinkle {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.3); }
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-100px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fall {
+            0% { top: -10%; opacity: 1; transform: rotate(0deg); }
+            100% { top: 110%; opacity: 0; transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5em; }
+            .content { padding: 20px; }
+            .petal { width: 15px; height: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <div class="petals">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+    <div class="content">
+        <h1>Eid Mubarak from Jasim's Family</h1>
+    </div>
+</body>
+</html>
